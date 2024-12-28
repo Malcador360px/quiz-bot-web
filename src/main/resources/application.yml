@@ -1,4 +1,4 @@
 server:
-  port : 8081
+  port : 80
   management : 8084
-  additionalPorts: 8082, 8083
+  additionalPorts: 443
