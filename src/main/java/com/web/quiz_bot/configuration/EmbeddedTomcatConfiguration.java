@@ -25,9 +25,6 @@ public class EmbeddedTomcatConfiguration implements WebMvcConfigurer {
     @Value("${server.additionalPorts:null}")
     private String additionalPorts;
 
-    @Value("${server.address}")
-    private String serverAddress;
-
     @Bean
     public WebServerFactoryCustomizer<TomcatServletWebServerFactory> servletContainer() {
 
