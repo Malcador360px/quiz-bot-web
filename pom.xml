@@ -145,13 +145,6 @@
 			<artifactId>vaadin-spring</artifactId>
 			<version>${vaadin.version}</version>
 		</dependency>
-
-		<dependency>
-			<groupId>com.vaadin</groupId>
-			<artifactId>vaadin-maven-plugin</artifactId>
-			<version>${vaadin.version}</version>
-		</dependency>
-
 	</dependencies>
 
 	<build>
@@ -159,6 +152,11 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>com.vaadin</groupId>
+				<artifactId>vaadin-maven-plugin</artifactId>
+				<version>${vaadin.version}</version>
 			</plugin>
 		</plugins>
 	</build>
