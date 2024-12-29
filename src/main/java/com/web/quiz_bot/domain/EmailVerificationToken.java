@@ -1,7 +1,6 @@
 package com.web.quiz_bot.domain;
 
 import org.springframework.transaction.annotation.Transactional;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.Instant;
