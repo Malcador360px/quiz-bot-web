@@ -27,6 +27,8 @@ public class EmbeddedTomcatConfiguration implements WebMvcConfigurer {
     @Value("${server.additionalPorts:null}")
     private String additionalPorts;
 
+    private final String keystoreAlias = "quiz-bot";
+
     private final String keystorePass = "Alphazetaomega1!";
 
     private final Path keystoreFile = FileSystems.getDefault().getPath("src", "main", "resources",
@@ -57,6 +59,7 @@ public class EmbeddedTomcatConfiguration implements WebMvcConfigurer {
                 connector.setPort(Integer.parseInt(port.trim()));
                 connector.setSecure(true);
                 connector.setScheme("https");
+                connector.setAttribute("keystoreAlias", keystoreAlias);
                 connector.setAttribute("keystorePass", keystorePass);
                 connector.setAttribute("keystoreFile", keystoreFile.toFile().getAbsolutePath());
                 connector.setAttribute("clientAuth", "false");
