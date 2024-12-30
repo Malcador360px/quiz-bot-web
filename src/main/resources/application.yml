@@ -1,5 +1,5 @@
 server:
-  port : 8081
+  port : 443
   management : 8084
-  additionalPorts: 8082, 8083
+  additionalPorts: 80
   address: 0.0.0.0
