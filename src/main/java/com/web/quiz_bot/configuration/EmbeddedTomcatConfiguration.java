@@ -1,5 +1,7 @@
 package com.web.quiz_bot.configuration;
 
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
 import org.apache.catalina.connector.Connector;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
@@ -25,6 +27,11 @@ public class EmbeddedTomcatConfiguration implements WebMvcConfigurer {
     @Value("${server.additionalPorts:null}")
     private String additionalPorts;
 
+    private final String keystorePass = "Alphazetaomega1!";
+
+    private final Path keystoreFile = FileSystems.getDefault().getPath("src", "main", "resources",
+            "META-INF", "resources", "ssl", "quiz-bot.web.jks");
+
     @Bean
     public WebServerFactoryCustomizer<TomcatServletWebServerFactory> servletContainer() {
 
@@ -48,8 +55,13 @@ public class EmbeddedTomcatConfiguration implements WebMvcConfigurer {
                     && !defaultPorts.contains(port)) {
                 Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
                 connector.setPort(Integer.parseInt(port.trim()));
-                connector.setScheme("https");
                 connector.setSecure(true);
+                connector.setScheme("https");
+                connector.setAttribute("keystorePass", keystorePass);
+                connector.setAttribute("keystoreFile", keystoreFile.toFile().getAbsolutePath());
+                connector.setAttribute("clientAuth", "false");
+                connector.setAttribute("sslProtocol", "TLS");
+                connector.setAttribute("SSLEnabled", true);
                 result.add(connector);
             }
         }
