@@ -48,7 +48,6 @@ public class CommunicationServlet extends HttpServlet {
             quizServerService.remove(UUID.fromString(data.getString(JSONKeys.SERVER_ID.toString())));
             response.setStatus(200);
         }
-        System.out.println("Check");
         response.getWriter().println("POST");
     }
 
