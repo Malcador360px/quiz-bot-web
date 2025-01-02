@@ -2,6 +2,7 @@ package com.web.quiz_bot.servlet;
 
 import com.web.quiz_bot.configuration.enums.JSONKeys;
 import com.web.quiz_bot.service.QuizServerService;
+import javax.net.ssl.HttpsURLConnection;
 import org.json.JSONObject;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
@@ -17,6 +18,7 @@ public class CommunicationServlet extends HttpServlet {
 
     public CommunicationServlet(QuizServerService quizServerService) {
         this.quizServerService = quizServerService;
+        HttpsURLConnection.setDefaultHostnameVerifier((hostname, session) -> true);
     }
 
     @Override

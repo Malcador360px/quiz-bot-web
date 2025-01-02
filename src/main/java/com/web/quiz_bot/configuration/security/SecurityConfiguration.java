@@ -3,7 +3,6 @@ package com.web.quiz_bot.configuration.security;
 import com.vaadin.flow.spring.security.VaadinWebSecurityConfigurerAdapter;
 import com.web.quiz_bot.service.security.DBBackedUserDetailsService;
 import com.web.quiz_bot.vaadin.view.LoginView;
-import javax.net.ssl.HttpsURLConnection;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -22,7 +21,6 @@ public class SecurityConfiguration extends VaadinWebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         super.configure(http);
-        HttpsURLConnection.setDefaultHostnameVerifier((hostname, session) -> true);
         setLoginView(http, LoginView.class);
     }
 
