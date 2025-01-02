@@ -1,6 +1,8 @@
 package com.web.quiz_bot.configuration;
 
 import com.google.common.base.Preconditions;
+import javax.net.ssl.HostnameVerifier;
+import org.apache.http.conn.ssl.NoopHostnameVerifier;
 import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -91,6 +93,11 @@ public class ApplicationConfig {
     @Bean
     public PersistenceExceptionTranslationPostProcessor exceptionTranslation() {
         return new PersistenceExceptionTranslationPostProcessor();
+    }
+
+    @Bean
+    public HostnameVerifier disableCertificateVerification() {
+        return new NoopHostnameVerifier();
     }
 
     final Properties getHibernateProperties() {
