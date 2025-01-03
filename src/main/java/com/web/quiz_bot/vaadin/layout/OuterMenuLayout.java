@@ -41,7 +41,6 @@ public class OuterMenuLayout extends CustomAppLayout implements BeforeEnterObser
     public OuterMenuLayout() {
         createHeader();
         createDrawer();
-        setContent(new MainView());
     }
 
     private void createHeader() {
