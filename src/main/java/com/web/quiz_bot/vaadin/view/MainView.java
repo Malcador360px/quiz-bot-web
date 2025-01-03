@@ -17,7 +17,7 @@ import com.web.quiz_bot.vaadin.layout.OuterMenuLayout;
 @PWA(
         name="quiz-bot",
         shortName="quiz-bot",
-        offlinePath="META-INF/resources/offline.html"
+        offlinePath="offline.html"
 )
 public class MainView extends VerticalLayout implements AppShellConfigurator {
 
