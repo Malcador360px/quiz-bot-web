@@ -1,6 +1,5 @@
 package com.web.quiz_bot.servlet;
 
-import com.vaadin.flow.component.page.AppShellConfigurator;
 import com.vaadin.flow.server.Constants;
 import com.vaadin.flow.server.VaadinServlet;
 import javax.servlet.annotation.WebInitParam;
