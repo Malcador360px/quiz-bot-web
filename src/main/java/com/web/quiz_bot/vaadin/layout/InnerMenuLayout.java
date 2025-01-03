@@ -37,7 +37,6 @@ import org.springframework.context.ApplicationEventPublisher;
 @UIScope
 @SpringComponent
 @PreserveOnRefresh
-@Viewport("width=device-width")
 public class InnerMenuLayout extends CustomAppLayout implements BeforeEnterObserver, LocaleChangeObserver {
 
     private final MenuHorizontal header = new MenuHorizontal();

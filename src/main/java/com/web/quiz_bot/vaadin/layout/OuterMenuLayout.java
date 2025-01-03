@@ -20,7 +20,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 
 @UIScope
 @PreserveOnRefresh
-@Viewport("width=device-width")
 public class OuterMenuLayout extends CustomAppLayout implements BeforeEnterObserver, LocaleChangeObserver {
 
     private final MenuHorizontal header = new MenuHorizontal();
