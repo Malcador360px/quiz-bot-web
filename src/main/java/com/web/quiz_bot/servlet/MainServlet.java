@@ -1,5 +1,6 @@
 package com.web.quiz_bot.servlet;
 
+import com.vaadin.flow.component.page.AppShellConfigurator;
 import com.vaadin.flow.server.Constants;
 import com.vaadin.flow.server.PWA;
 import com.vaadin.flow.server.VaadinServlet;
@@ -14,5 +15,5 @@ import javax.servlet.annotation.WebServlet;
         shortName="quiz-bot",
         offlinePath = "offline.html"
 )
-public class MainServlet extends VaadinServlet {
+public class MainServlet extends VaadinServlet implements AppShellConfigurator {
 }
