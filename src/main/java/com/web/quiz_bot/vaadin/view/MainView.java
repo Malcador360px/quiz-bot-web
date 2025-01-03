@@ -2,6 +2,7 @@ package com.web.quiz_bot.vaadin.view;
 
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.page.AppShellConfigurator;
+import com.vaadin.flow.component.page.Viewport;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.InitialPageSettings;
 import com.vaadin.flow.server.PWA;
@@ -16,8 +17,9 @@ import com.web.quiz_bot.vaadin.layout.OuterMenuLayout;
 @PWA(
         name="quiz-bot",
         shortName="quiz-bot",
-        offlinePath = "offline.html"
+        offlinePath="META-INF/resources/offline.html"
 )
+@Viewport("width=device-width")
 public class MainView extends VerticalLayout implements AppShellConfigurator {
 
     public MainView() {
