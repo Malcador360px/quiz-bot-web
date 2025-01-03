@@ -10,6 +10,7 @@ import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.component.page.Viewport;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.i18n.LocaleChangeEvent;
@@ -36,6 +37,7 @@ import org.springframework.context.ApplicationEventPublisher;
 @UIScope
 @SpringComponent
 @PreserveOnRefresh
+@Viewport("width=device-width")
 public class InnerMenuLayout extends CustomAppLayout implements BeforeEnterObserver, LocaleChangeObserver {
 
     private final MenuHorizontal header = new MenuHorizontal();

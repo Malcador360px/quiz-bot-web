@@ -19,7 +19,6 @@ import com.web.quiz_bot.vaadin.layout.OuterMenuLayout;
         shortName="quiz-bot",
         offlinePath="META-INF/resources/offline.html"
 )
-@Viewport("width=device-width")
 public class MainView extends VerticalLayout implements AppShellConfigurator {
 
     public MainView() {
