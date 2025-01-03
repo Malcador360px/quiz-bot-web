@@ -11,7 +11,7 @@ import com.vaadin.flow.server.auth.AnonymousAllowed;
 import com.vaadin.flow.spring.annotation.UIScope;
 import com.web.quiz_bot.vaadin.layout.OuterMenuLayout;
 
-@Route(value = "", layout = OuterMenuLayout.class)
+@Route(value = "")
 @UIScope
 @AnonymousAllowed
 @PWA(

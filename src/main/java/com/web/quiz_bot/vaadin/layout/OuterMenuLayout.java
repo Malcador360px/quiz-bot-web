@@ -5,7 +5,6 @@ import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
-import com.vaadin.flow.component.page.Viewport;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.i18n.LocaleChangeEvent;
 import com.vaadin.flow.i18n.LocaleChangeObserver;
@@ -42,6 +41,7 @@ public class OuterMenuLayout extends CustomAppLayout implements BeforeEnterObser
     public OuterMenuLayout() {
         createHeader();
         createDrawer();
+        setContent(new MainView());
     }
 
     private void createHeader() {
